@@ -8,6 +8,6 @@ public class ProjetoPOO {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        System.out.println("Primeiro codígo de POO II");
+        System.out.println("Primeiro código de POO II");
     }
 }
