@@ -9,48 +9,54 @@ package br.edu.tds.Produto;
  * @author aluno
  */
 public class Produto {
-    //Definição de atributos da classe
+    //Exercício 1
     private String nome;
-    private double preco;
+    private float preco;
     private int quantidade;
     
-    //Definir o(s) meu(s) construtor
+    //Exercício 2
     public Produto(){
    
     }
-    
-    public Produto(String n, double p, int q){
+    //Exercício 3
+    public Produto(String n, float p, int q){
         this.nome = n;
         this.preco = p;
         this.quantidade = q;
     }
     
-    //Métodos get & set 
+    //Exercício 3 
     public String getNome(){
         return this.nome;
     }
     public void setNome(String n){
         this.nome = n;
     }
-    public double getPreco(){
+    public float getPreco(){
         return this.preco;
     }
-    public void setCPF(double p){
+    public void setPreco(float p){
         this.preco = p;
     }
     public int getQuantidade(){
         return this.quantidade;
     }
-    public void setIdade(int q){
+    public void setQuantidade(int q){
         this.quantidade = q;
     }
     
-    //Métodos funcionais
-    public void imprimeDadosProduto(){
-        System.out.println("\nNome.: " + this.nome);
-        System.out.println("Preco.: " + this.preco);
-        System.out.println("Quantidade: " + this.quantidade);
-        System.out.println("----------------------");
+    //Exercício 5.1
+    public void aplicarDesconto(float percentual){
+        float valorcomdesconto = preco - (preco * (percentual/100));
+        System.out.println("Valor após o desconto: " + valorcomdesconto);
+    }
+    //Exercício 5.2
+    public void aumentarQuantidade(int valor){
+        quantidade += valor;
+    }
+    //Exercício 5.3
+    public void diminuirQuantidade(int valor){
+        quantidade -= valor;
     }
         
 }
