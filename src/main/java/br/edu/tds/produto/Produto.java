@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.tds.Produto;
+package br.edu.tds.produto;
 
 /**
  *
@@ -56,7 +56,12 @@ public class Produto {
     }
     //Exercício 5.3
     public void diminuirQuantidade(int valor){
-        quantidade -= valor;
+        if(valor > quantidade){
+            System.out.println("Quantidade insuficiente.");
+        }else{
+            quantidade -= valor;
+        }
+        
     }
         
 }
