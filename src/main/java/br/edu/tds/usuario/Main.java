@@ -10,4 +10,24 @@ package br.edu.tds.usuario;
  */
 public class Main {
     
+    public static void main(String[] args){
+        
+        UsuarioDAO dao = new UsuarioDAO();
+        
+        //Cadastrando um usuário
+        Usuario u1 = new Usuario("Carlos" , "carlos@email.com", "123");
+        dao.cadastrar(u1);
+        
+        //Testando o Login
+        boolean acesso = dao.login("carlos@email.com", "1234");
+        
+        if(acesso){
+            System.out.println("Login realizado com sucesso!!!");
+        }
+        else{
+            System.out.println("Email ou senha inválidos!");
+        }
+        
+    }
+    
 }

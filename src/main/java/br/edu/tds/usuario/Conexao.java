@@ -4,10 +4,22 @@
  */
 package br.edu.tds.usuario;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 /**
  *
  * @author aluno
  */
 public class Conexao {
+    
+    private static final String URL = "jdbc:mysql://localhost:3306/sistemas_usuario";
+    private static final String USER = "root";
+    private static final String PASSWORD = "ifsuldeminas";
+    
+    public static Connection conectar() throws Exception {
+       return DriverManager.getConnection(URL, USER, PASSWORD);
+   }
+
     
 }
