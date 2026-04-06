@@ -15,8 +15,17 @@ public class Main {
         UsuarioDAO dao = new UsuarioDAO();
         
         //Cadastrando um usuário
-        Usuario u1 = new Usuario("Carlos" , "carlos@email.com", "123");
+        Usuario u1 = new Usuario("Carlos" , "carlos@email.com", "12345");
         dao.cadastrar(u1);
+        
+        Usuario u2 = new Usuario("Erick" , "erick@email.com", "24680");
+        dao.cadastrar(u2);
+        
+        Usuario u3 = new Usuario("Nicolle" , "nicolle@email.com", "98765");
+        dao.cadastrar(u3);
+        
+        Usuario u4 = new Usuario("Ryan" , "ryan@email.com", "13579");
+        dao.cadastrar(u4);
         
         //Testando o Login
         boolean acesso = dao.login("carlos@email.com", "1234");
